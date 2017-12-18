@@ -1,0 +1,84 @@
+{
+  "name": "react-flux-graphql-demo",
+  "version": "1.0.0",
+  "description": "React based data-driven application built with Flux, GraphQL and Relay",
+  "main": "lib/server.js",
+  "scripts": {
+    "dev": "NODE_PATH=./lib pm2 start lib/server.js --watch --interpreter babel-node --name appDev",
+    "webpack": "webpack -wd",
+    "test": "NODE_PATH=./lib jest --watch",
+    "verify-tests": "NODE_PATH=./lib jest --coverage",
+    "build-webpack": "webpack -p",
+    "build-node": "babel lib -d build --copy-files",
+    "start-prod": "NODE_ENV=production NODE_PATH=./build pm2 start build/server.js -i max --name appProd"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aviralmishra/react-flux-graphql-demo.git"
+  },
+  "keywords": [
+    "React",
+    "ES6",
+    "Jest",
+    "Enzyme",
+    "Webpack",
+    "GraphQL",
+    "Relay",
+    "Flux"
+  ],
+  "author": "Aviral Mishra (aviral.mishra@gmail.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aviralmishra/react-flux-graphql-demo/issues"
+  },
+  "homepage": "https://github.com/aviralmishra/react-flux-graphql-demo#readme",
+  "babel": {
+    "presets": [
+      "react", [
+        "env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ],
+    "plugins": [
+      "transform-class-properties",
+      "transform-object-rest-spread"
+    ]
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.0.3",
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "css-loader": "0.28.7",
+    "enzyme": "^3.2.0",
+    "enzyme-adapter-react-16": "^1.1.0",
+    "eslint": "^4.13.1",
+    "eslint-plugin-react": "^7.5.1",
+    "file-loader": "1.1.5",
+    "jest": "^21.2.1",
+    "open-browser-webpack-plugin": "0.0.5",
+    "pm2": "^2.9.1",
+    "react-test-renderer": "^16.2.0",
+    "style-loader": "0.19.0",
+    "url-loader": "0.6.2",
+    "webpack": "^3.10.0"
+  },
+  "dependencies": {
+    "axios": "^0.17.1",
+    "bootstrap": "3.3.7",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "lodash.debounce": "^4.0.8",
+    "lodash.pickby": "^4.6.0",
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  }
+}
