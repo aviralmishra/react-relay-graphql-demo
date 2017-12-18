@@ -1,7 +1,8 @@
 const path = require('path');
 const webpack = require('webpack');
+const OpenBrowserPlugin = require('open-browser-webpack-plugin');
 
-const config = {
+const webpackConfig = {
   resolve: {
     modules: [path.resolve('./lib'), path.resolve('./node_modules')]
   },
@@ -56,7 +57,10 @@ const config = {
       }
     ]
   },
-  plugins: [new webpack.optimize.CommonsChunkPlugin({name: 'vendor'})]
+  plugins: [
+    new webpack.optimize.CommonsChunkPlugin({name: 'vendor'}),
+    new OpenBrowserPlugin({url: 'http://localhost:8080'})
+  ]
 };
 
-module.exports = config;
+module.exports = webpackConfig;
