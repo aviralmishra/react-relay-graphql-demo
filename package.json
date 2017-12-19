@@ -34,7 +34,8 @@
   "homepage": "https://github.com/aviralmishra/react-flux-graphql-demo#readme",
   "babel": {
     "presets": [
-      "react", [
+      "react",
+      [
         "env",
         {
           "targets": {
@@ -75,8 +76,10 @@
     "bootstrap": "3.3.7",
     "ejs": "^2.5.7",
     "express": "^4.16.2",
+    "kerberos": "0.0.23",
     "lodash.debounce": "^4.0.8",
     "lodash.pickby": "^4.6.0",
+    "mongodb": "^3.0.0-rc0",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
