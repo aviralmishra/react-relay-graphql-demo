@@ -27,12 +27,16 @@ const webpackConfig = {
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['react', 'env', 'stage-2']
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: ['react', 'env', 'stage-2']
+            }
+          }, {
+            loader: 'eslint-loader'
           }
-        }
+        ]
       }, {
         test: /\.css$/,
         loader: ['style-loader', 'css-loader']

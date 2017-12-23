@@ -54,3 +54,11 @@ npm run build-node
 ```
 npm run start-prod
 ```
+
+## Links
+
+[Node.js MongoDB Driver API](http://mongodb.github.io/node-mongodb-native/3.0/api/)
+
+## To Do
+
+1. Automated tests
