@@ -6,6 +6,9 @@ module.exports = {
       watch: true,
       ignore_watch: 'lib/data/schema.json',
       interpreter: 'babel-node',
+      env: {
+        NODE_PATH: './lib'
+      },
       env_development: {
         NODE_ENV: 'development'
       },
@@ -33,9 +36,9 @@ module.exports = {
       repo: 'git+https://github.com/aviralmishra/react-flux-graphql-demo.git',
       path: '/var/www/production',
       'post-deploy': 'npm install && pm2 reload ecosystem.config.js --env production',
-      script: 'build/server.js',
-      name: 'appProd',
-      i: 'max'
+      env: {
+        NODE_ENV: 'production'
+      }
     }
   }
 };

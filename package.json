@@ -4,7 +4,7 @@
   "description": "React based data-driven application built with Flux, GraphQL and Relay",
   "main": "lib/server.js",
   "scripts": {
-    "dev": "NODE_PATH=./lib pm2 start ecosystem.config.js --env development",
+    "dev": "pm2 flush && pm2 start ecosystem.config.js --env development",
     "webpack": "webpack -wd",
     "test": "NODE_PATH=./lib jest --watch",
     "verify-tests": "NODE_PATH=./lib jest --coverage",
