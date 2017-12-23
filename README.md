@@ -59,6 +59,8 @@ npm run start-prod
 
 1. [Node.js MongoDB Driver API](http://mongodb.github.io/node-mongodb-native/3.0/api/)
 2. [PM2 Process File](http://pm2.keymetrics.io/docs/usage/application-declaration/)
+3. [Relay](https://facebook.github.io/relay/)
+4. [Template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
 
 ## To Do
 
