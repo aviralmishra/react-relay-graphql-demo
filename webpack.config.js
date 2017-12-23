@@ -16,7 +16,7 @@ const webpackConfig = {
       'lodash.debounce',
       'lodash.pickby'
     ],
-    app: ['./lib/index.js']
+    app: ['./lib/app.js']
   },
   output: {
     path: path.resolve(__dirname, 'public'),
@@ -31,7 +31,10 @@ const webpackConfig = {
           {
             loader: 'babel-loader',
             options: {
-              presets: ['react', 'env', 'stage-2']
+              presets: [
+                'react', 'env', 'stage-2'
+              ],
+              plugins: [path.resolve(__dirname, './lib/babelRelayPlugin')]
             }
           }, {
             loader: 'eslint-loader'

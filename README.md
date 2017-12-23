@@ -62,3 +62,4 @@ npm run start-prod
 ## To Do
 
 1. Automated tests
+2. Production build and run
